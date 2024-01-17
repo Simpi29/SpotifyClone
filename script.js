@@ -1,5 +1,5 @@
 async function getSongs() {
-  let a = await fetch('/JS/spotifyClone/songs/');
+  let a = await fetch('http://127.0.0.1:5500/songs/');
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -27,7 +27,7 @@ async function main() {
     songUL.innerHTML += `<li>
       <img class="invert" src="music.svg" alt="music">
       <div class="songInfo">
-        <div class="songName">${song}</div>
+        <div class="songName">${song.replaceAll("_","")}</div>
         <div class="songArtist">Simpi</div>
       </div>
       <div class="playNow">

@@ -224,11 +224,12 @@ body {
 }
 
 .playBar {
-    width: 96%;
-    background-color: rgb(102, 226, 102);
+    width: 95%;
+    background-color: rgb(47, 49, 47);
     position: absolute;
     bottom: 0;
-    padding: 12px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .songButtons {
@@ -239,14 +240,14 @@ body {
 
 .songList ul li {
     list-style-type: decimal;
-    display: flex;
-    gap : 5px;
-    cursor: pointer;
-    padding: 12px 5px;
-  border: 1px solid white;
-  border-radius: 7px;
-  margin: 5px;
+   display: flex;
+   gap: 5px;
+border: 1px solid white;
 
+border-radius: 6px;
+padding: 10px 6px;
+
+margin:5px;
 }
 
 
@@ -255,17 +256,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+ margin-left: 12px;
 }
 
 .playNow span{
-    width:75px;
+    width:70px;
 font-size: 15px;
 
 }
 
 
 
-.songName{
-    width: 90px;
+
+.songInfo {
+   
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* Allow the container to shrink */
+    overflow-y: auto; /* Enable vertical scrolling for overflow content */
 }
 
+.songList{
+    overflow: scroll;
+    height: 360px;
+
+}
