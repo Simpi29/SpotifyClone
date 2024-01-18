@@ -307,3 +307,14 @@ transition: left 0.5s;
 .songButtons img{
     cursor: pointer;
 }
+
+.songInformation , .songTimer{
+    color: white;
+
+}
+
+.aboveBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12px;
+}

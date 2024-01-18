@@ -1,4 +1,19 @@
 let currentSong = new Audio();
+
+function convertSecondsToMinutesAndSeconds(seconds) {
+  
+
+  var minutes = Math.floor(seconds / 60);
+  var remainingSeconds = Math.floor(seconds % 60);
+
+  // Add leading zeros if necessary
+  var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  var formattedSeconds = remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
+
+  return formattedMinutes + ":" + formattedSeconds;
+}
+
+
 async function getSongs() {
   let a = await fetch('http://127.0.0.1:5500/songs/');
   let response = await a.text();
@@ -23,6 +38,10 @@ const playMusic = (track)=>{
   currentSong.src = "http://127.0.0.1:5500/songs/" + track;
 
   currentSong.play();
+  play.src = "pause.svg";
+  document.querySelector(".songInformation").innerHTML = track;
+
+  // document.querySelector(".songTimer").innerHTML = "0:00/0:00";
 }
 
 
@@ -57,6 +76,24 @@ playMusic(e.querySelector(".songInfo").firstElementChild.innerHTML.trim())
     }
   )
     
+
+  play.addEventListener("click",()=>{
+    if(currentSong.paused){
+      currentSong.play();
+      play.src = "pause.svg";
+    }
+    else{
+      currentSong.pause();
+      play.src = "play1.svg";
+    }
+  })
+
+  currentSong.addEventListener("timeupdate",()=>{
+    console.log(currentSong.currentTime,currentSong.duration);
+    document.querySelector(".songTimer").innerHTML = `${convertSecondsToMinutesAndSeconds(currentSong.currentTime)}/${convertSecondsToMinutesAndSeconds(currentSong.duration)}`;
+  })
+
+  
 
 }
 
