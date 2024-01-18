@@ -228,8 +228,8 @@ body {
     background-color: rgb(47, 49, 47);
     position: absolute;
     bottom: 0;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 13px 5px;
+    border-radius: 10px;
 }
 
 .songButtons {
@@ -246,7 +246,7 @@ border: 1px solid white;
 
 border-radius: 6px;
 padding: 10px 6px;
-
+cursor: pointer;
 margin:5px;
 }
 
@@ -281,4 +281,29 @@ font-size: 15px;
     overflow: scroll;
     height: 360px;
 
+}
+
+.seekBar{
+    height: 2px;
+    width: 98%;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 0;
+    margin: 4px;
+}
+
+.circle{
+    height: 11px;
+    width: 11px;
+    background-color: rgb(249, 238, 238);
+    border-radius: 9px;
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+transition: left 0.5s;
+}
+
+.songButtons img{
+    cursor: pointer;
 }
