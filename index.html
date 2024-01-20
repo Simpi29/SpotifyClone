@@ -12,7 +12,9 @@
   <div class="container flex bg-black">
 
     <div class="left">
-
+<div class="close">
+  <img  class = "invert" src="close.svg" alt="close">
+</div>
       <div class="home bg-grey rounded m-1 p-1">
         <img class="invert" src="logo.svg" alt="logo">
         <ul>
@@ -69,7 +71,10 @@
     </div>
     <div class="right bg-grey rounded ">
       <div class="header rounded">
+   
         <div class="nav">
+         
+          <img class = "invert hamBurger" src="hamBurger.svg" alt="hamburger">
           <img src="left.svg" alt="left">
           <img src="right.svg" alt="right">
         </div>
@@ -77,6 +82,7 @@
           <button class="signUp">Sign up</button>
           <button class="logIn">Log in</button>
         </div>
+     
       </div>
       <div class="spotifyPlaylists">
         <h1>Spotify Playlists</h1>
@@ -103,8 +109,12 @@
 
         </div>
         <div class="playBar">
-          <div class="seekBar">
-            <div class="circle"></div>
+          <div class="seekBar" onmouseover = "showHiddenContent()" onmouseout = "hideHiddenContent()">
+            <div class="hiddenTimer"></div>
+         
+            <div class="circle" >
+             
+            </div>
           </div>
           <div class="aboveBar">
           <div class="songInformation"></div>

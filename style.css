@@ -17,10 +17,12 @@ body {
     padding: 10px;
 
 
+
 }
 
 .right {
     width: 78vw;
+  height: 97vh;
 }
 
 .flex {
@@ -42,6 +44,9 @@ body {
 
 }
 
+.library{
+    height: 74vh;
+}
 .bg-black {
     background-color: black;
     color: white;
@@ -319,3 +324,48 @@ transition: left 0.5s;
     justify-content: space-between;
     padding: 0px 12px;
 }
+
+.hiddenTimer{
+   
+    padding: 10px 30px;
+    bottom: 15px;
+color: white;
+    position: absolute;
+}
+
+
+@media (max-width: 1400px) {
+    .left {
+        background-color: black;
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        z-index: 1;
+        width: 250px;
+    }
+    .right {
+        width: 100vw;
+    }
+    .playBar {
+        width: 95%;
+    }
+    .hamBurger {
+        display: block !important;
+    }
+
+   
+}
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.hamBurger{
+    display: none;
+}
+

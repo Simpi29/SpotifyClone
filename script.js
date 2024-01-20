@@ -103,6 +103,10 @@ playMusic(e.querySelector(".songInfo").firstElementChild.innerHTML.trim())
     currentSong.currentTime  = ((currentSong.duration) * percent) /100;
   })
 
+  //event listener for hamburger
+  document.querySelector(".hamBurger").addEventListener("click",()=>{
+    document.querySelector(".left").style.left = "0";
+  })
 }
 
 main();
