@@ -349,6 +349,13 @@ color: white;
     .playBar {
         width: 95%;
     }
+    .close{
+        position: absolute;
+     top: 15;
+     left: 229;
+     display: block !important;
+        
+    }
     .hamBurger {
         display: block !important;
     }
@@ -369,3 +376,7 @@ color: white;
     display: none;
 }
 
+
+.close{
+    display: none;
+}

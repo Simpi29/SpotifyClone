@@ -107,6 +107,11 @@ playMusic(e.querySelector(".songInfo").firstElementChild.innerHTML.trim())
   document.querySelector(".hamBurger").addEventListener("click",()=>{
     document.querySelector(".left").style.left = "0";
   })
+
+  //event listener for close
+  document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left = "-100%";
+  })
 }
 
 main();
