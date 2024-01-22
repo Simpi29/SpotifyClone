@@ -241,6 +241,7 @@ body {
     padding: 13px 5px;
     border-radius: 10px;
     min-height: 40px;
+    border: 1px solid rgb(116, 113, 113);
 }
 
 .songButtons {
@@ -288,6 +289,10 @@ font-size: 15px;
     overflow-y: auto; /* Enable vertical scrolling for overflow content */
 }
 
+.songInfo div{
+    word-break: break-all;
+}
+
 .songList{
     overflow: scroll;
     height: 360px;
@@ -323,6 +328,11 @@ transition: left 0.5s;
 .songInformation , .songTimer{
     color: white;
 
+
+}
+
+.songInformation{
+    width: 300px;
 }
 
 .aboveBar{
@@ -330,6 +340,7 @@ transition: left 0.5s;
     justify-content: space-between;
     padding: 0px 12px;
     margin: 10px 0;
+
 }
 
 .hiddenTimer{
@@ -349,6 +360,7 @@ color: white;
         transition: all .3s;
         z-index: 1;
         width: 352px;
+        padding: 0;
     }
     .right {
         width: 100vw;
@@ -386,6 +398,18 @@ color: white;
     align-items: center;
     gap: 15px;
    }
+
+   .songInformation{
+    width: auto;
+   }
+
+   .timeVol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+   }
 }
 
 
@@ -405,3 +429,18 @@ color: white;
 .close{
     display: none;
 }
+
+
+.volume{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.timeVol{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
