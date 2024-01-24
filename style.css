@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto:wght@400;700&display=swap');
-
+:root{
+    --a : 0;
+}
 
 * {
     margin: 0;
@@ -146,8 +148,14 @@ body {
     border-radius: 8px;
     padding: 10px;
     position: relative;
+    transition: all .9s;
 }
+.card:hover{
+    background-color: rgb(48, 47, 47);
+    cursor: pointer;
+    --a : 1;
 
+}
 .card img {
     width: 100%;
     object-fit: contain;
@@ -175,7 +183,7 @@ body {
     position: absolute;
     top: 120;
     right: 18;
-    opacity: 1;
+    opacity: var(--a);
     transition: all 1s ease-out;
 }
 
