@@ -15,7 +15,7 @@ body {
 }
 
 .left {
-    width: 20vw;
+    width: 30vw;
     padding: 10px;
 
 
@@ -262,10 +262,10 @@ body {
     list-style-type: decimal;
    display: flex;
    gap: 5px;
-border: 1px solid white;
-
+border: 1px solid rgb(118, 113, 113);
+justify-content: space-between;
 border-radius: 6px;
-padding: 10px 6px;
+padding: 10px;
 cursor: pointer;
 margin:5px;
 }
@@ -302,7 +302,7 @@ font-size: 15px;
 }
 
 .songList{
-    overflow: scroll;
+    overflow: auto;
     height: 360px;
 
 }
@@ -360,7 +360,7 @@ color: white;
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1250px) {
     .left {
         background-color: black;
         position: absolute;
@@ -444,6 +444,12 @@ color: white;
     gap: 12px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.range input{
+    cursor: pointer;
+   
 }
 .timeVol{
     display: flex;
